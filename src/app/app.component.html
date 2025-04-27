@@ -1,6 +1,6 @@
 <div class="app">
   <div class="banner-form-wrapper">
     <app-banner />
-    <app-form-nova-trasacao />
+    <app-form-nova-trasacao (transacaoCriada)="processarTransacao($event)" />
   </div>
 </div>
