@@ -1,8 +1,9 @@
+import { CurrencyPipe } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-conta',
-  imports: [],
+  imports: [CurrencyPipe],
   templateUrl: './conta.component.html',
   styleUrl: './conta.component.css'
 })
