@@ -1,46 +1,176 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  :root {
-    --preto: #000000;
-    --cinza-escuro: #8B8B8B;
-    --cinza-medio: #A6A6A6;
-    --cinza: #CBCBCB;
-    --azul-destaques: #90DDFF;
-    --azul-hover: #5CC0ED;
-    --azul-pressionado: #30A7DC;
-    --gradiente-azul: linear-gradient(180deg, #FFF 0%, #6BD1FF 100%);
-    --fundo-azul-claro: #F2FBFF;
-    --fundo-cinza-claro: #F5F5F5;
-  }
-  
-  html,
-  body {
-    font-family: "Montserrat", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    min-height: 100vh;
-    color: var(--preto);
-  }
-  
-  button,
-  select,
-  input,
-  textarea {
-    font: inherit;
-    color: inherit;
-  }
-  
-  button {
-    border: 0;
-  }
-  
-  ul,
-  li {
-    list-style: none;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --preto: #000000;
+  --cinza-escuro: #8B8B8B;
+  --cinza-medio: #A6A6A6;
+  --cinza: #CBCBCB;
+  --azul-destaques: #90DDFF;
+  --azul-hover: #5CC0ED;
+  --azul-pressionado: #30A7DC;
+  --gradiente-azul: linear-gradient(180deg, #FFF 0%, #6BD1FF 100%);
+  --fundo-azul-claro: #F2FBFF;
+  --fundo-cinza-claro: #F5F5F5;
+}
+
+html,
+body {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  min-height: 100vh;
+  color: var(--preto);
+}
+
+button,
+select,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  border: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}

@@ -1,0 +1,28 @@
+.conta {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.titulo {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 120%
+}
+
+.divisoria {
+    height: 0.125rem;
+    background: var(--preto);
+}
+
+.tipo-conta {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.saldo {
+    font-size: 1.9375rem;
+    font-weight: 600;
+    line-height: 125%;
+}
