@@ -14,6 +14,7 @@ export class AppComponent {
 
   saldo = computed(() => {
     return this.transacoes().reduce((acc, transacaoAtual) => {
+    
       switch (transacaoAtual.type) {
         case TipoTransacao.DEPOSITO:
           return acc + transacaoAtual.value;
@@ -29,8 +30,9 @@ export class AppComponent {
   });
  
   processarTransacao(transacao: Transacao) {
-    this.transacoes.update((listaAtual) => {transacao, ...listaAtual});
-
-    console.log(this.transacoes());
-  };
+    if (transacao.type === TipoTransacao.SAQUE && transacao.value > this.saldo()) {
+      return alert('Saldo insuficiente!');
+    }
+    this.transacoes.update((listaAtual) => [transacao, ...listaAtual]);
+  }
 }
