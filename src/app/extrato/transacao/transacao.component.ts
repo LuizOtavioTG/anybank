@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { Transacao } from '../../model/transacao';
 
 @Component({
   selector: 'app-transacao',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './transacao.component.css'
 })
 export class TransacaoComponent {
-
+  transacao =input.required<Transacao>();
 }

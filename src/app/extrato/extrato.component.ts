@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { TransacaoComponent } from "./transacao/transacao.component";
+import { Transacao } from '../model/transacao';
 
 @Component({
   selector: 'app-extrato',
@@ -8,5 +9,6 @@ import { TransacaoComponent } from "./transacao/transacao.component";
   styleUrl: './extrato.component.css'
 })
 export class ExtratoComponent {
+  transacoes = input.required<Transacao[]>();
 
 }
