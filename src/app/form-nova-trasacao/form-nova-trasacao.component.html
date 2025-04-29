@@ -8,8 +8,11 @@
                 <div class="select-wrapper">
                     <select [(ngModel)]="tipoTransacao" name="tipo-transacao" class="campo select-tipo-transacao" required>
                         <option value="" selected disabled>Selecione o tipo de transação</option>
-                        <option value="deposito">Depósito</option>
-                        <option value="saque">Saque</option>
+
+                        @for (tipo of tipoTransacaoEnum |keyvalue; track tipo.key) {
+                            <option [value]="tipo.value">{{tipo.value}}</option>
+                        }
+
                     </select>
                 </div>
             </label>
