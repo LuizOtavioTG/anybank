@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { BannerComponent } from "./banner/banner.component";
 import { FormNovaTrasacaoComponent } from "./form-nova-trasacao/form-nova-trasacao.component";
 import { Transacao } from './model/transacao';
@@ -10,8 +10,17 @@ import { Transacao } from './model/transacao';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-processarTransacao(transacao: Transacao) {
- console.log(transacao);
-}
-  title = 'anybank';
+  transacoes = signal<Transacao[]>([]);
+
+  saldo = computed(() => {
+    return this.transacoes().reduce((acc, transacaoAtual) => {
+      return acc + transacaoAtual.valor;
+    }, 0);
+  });
+ 
+  processarTransacao(transacao: Transacao) {
+    this.transacoes.update((listaAtual) => {transacao, ...listaAtual});
+
+    console.log(this.transacoes());
+  };
 }
